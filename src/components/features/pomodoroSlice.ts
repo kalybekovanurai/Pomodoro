@@ -52,9 +52,6 @@ const pomodoroSlice = createSlice({
     incrementPomodoroCount: (state) => {
       state.completedPomodoros += 1;
     },
-    resetPomodoroCount: (state) => {
-      state.completedPomodoros = 0;
-    },
   },
 });
 
@@ -63,7 +60,6 @@ export const {
   toggleRunning,
   setVariantTime,
   incrementPomodoroCount,
-  resetPomodoroCount,
 } = pomodoroSlice.actions;
 
 export default pomodoroSlice.reducer;
