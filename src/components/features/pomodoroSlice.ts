@@ -37,13 +37,13 @@ const pomodoroSlice = createSlice({
 
       switch (action.payload.variant) {
         case "pomodoro":
-          state.time = (s?.pomodoro ?? 25) * 60;
+          state.time = (s?.pomodoro || 25) * 60;
           break;
         case "shortBreak":
-          state.time = (s?.shortBreak ?? 5) * 60;
+          state.time = (s?.shortBreak || 5) * 60;
           break;
         case "longBreak":
-          state.time = (s?.longBreak ?? 15) * 60;
+          state.time = (s?.longBreak || 15) * 60;
           break;
       }
 
