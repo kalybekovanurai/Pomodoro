@@ -3,7 +3,6 @@ import {
   setVariantTime,
   toggleRunning,
   incrementPomodoroCount,
-  resetPomodoroCount,
 } from "@/components/features/pomodoroSlice";
 import type { RootState } from "@/store/store";
 import type { PomodoroSettings } from "@/components/pomodoro/types";
@@ -26,12 +25,9 @@ export function usePomodoro() {
     if (activeBg === "pomodoro") {
       dispatch(incrementPomodoroCount());
 
-      if ((completedPomodoros + 1) % settings.longBreakInterval === 0) {
-        next = "longBreak";
-        dispatch(resetPomodoroCount());
-      } else {
-        next = "shortBreak";
-      }
+      const isLongBreak =
+        (completedPomodoros + 1) % settings.longBreakInterval === 0;
+      next = isLongBreak ? "longBreak" : "shortBreak";
     } else {
       next = "pomodoro";
     }

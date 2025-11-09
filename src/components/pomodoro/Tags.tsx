@@ -1,4 +1,3 @@
-// src/components/Tags.tsx
 import type { BgVariants } from "@/types";
 import { twMerge } from "tailwind-merge";
 
