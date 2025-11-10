@@ -5,8 +5,8 @@ import {
   incrementPomodoroCount,
 } from "@/components/features/pomodoroSlice";
 import type { RootState } from "@/store/store";
-import type { PomodoroSettings } from "@/components/pomodoro/types";
-import type { BgVariants } from "@/types";
+import type { BgVariants, PomodoroSettings } from "@/components/pomodoro/types";
+
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 

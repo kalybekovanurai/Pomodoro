@@ -4,7 +4,7 @@ import Header from "../components/pomodoro/Header";
 import type { RootState } from "../store/store";
 import Timer from "../components/pomodoro/Timer";
 import SettingsModal from "../components/pomodoro/SettingsModal";
-import { bgColor } from "../types";
+import { bgColor } from "../components/pomodoro/types";
 import { usePomodoro } from "../hooks/usePomodoro";
 
 function TimerApp() {

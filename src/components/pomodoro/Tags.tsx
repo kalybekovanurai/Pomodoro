@@ -1,5 +1,6 @@
-import type { BgVariants } from "@/types";
+
 import { twMerge } from "tailwind-merge";
+import type { BgVariants } from "./types";
 
 interface TagsProps {
   activeBg: BgVariants;
